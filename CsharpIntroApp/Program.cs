@@ -14,7 +14,7 @@ namespace CsharpIntroApp
             //VARS TO BE USED
             string userName;
             int userGuess = 0;
-            int correctNumber = 7;
+            int correctNumber = new Random().Next(1, 10);
 
 
             //STARTUP PREP
@@ -24,39 +24,61 @@ namespace CsharpIntroApp
 
             Console.ResetColor();
 
-            //SEEK RES
             Console.Write("What is your name? : ");
 
-            //GRAB RES
             userName = Console.ReadLine();
 
             Console.WriteLine("Hello {0}, let's play a game...", userName);
 
-            Console.Write("Guess a number between 1 and 10 : ");
-
-
-           while (userGuess != correctNumber)
+            while (true)
             {
-                string input = Console.ReadLine();
 
-                userGuess = Int32.Parse(input);
+                Console.Write("Guess a number between 1 and 10 : ");
 
-                if(userGuess != correctNumber)
+
+                while (userGuess != correctNumber)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    string input = Console.ReadLine();
 
-                    Console.WriteLine("Wrong number, please try again!");
+                    if (!int.TryParse(input, out userGuess))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
 
-                    Console.ResetColor();
+                        Console.WriteLine("Not a number, please try again!");
+
+                        Console.ResetColor();
+                    }
+
+                    userGuess = Int32.Parse(input);
+
+                    if (userGuess != correctNumber)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+
+                        Console.WriteLine("Wrong number, please try again!");
+
+                        Console.ResetColor();
+                    }
+
                 }
 
+                Console.ForegroundColor = ConsoleColor.Yellow;
+
+                Console.WriteLine("You are CORRECT!!!");
+
+                Console.ResetColor();
+
+                Console.Write("Play Again? [Y or N] : ");
+
+                string answer = Console.ReadLine().ToUpper();
+
+                if (answer == "Y") {
+                    userGuess = 0;
+                    continue;
+                } else if (answer == "N") {
+                    return;
+                }
             }
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            Console.WriteLine("You are correct!");
-
-            Console.ResetColor();
         }
     }
 }
