@@ -1,0 +1,6 @@
+/Users/chase/Projects/CsharpIntroApp/CsharpIntroApp/bin/Debug/CsharpIntroApp.exe
+/Users/chase/Projects/CsharpIntroApp/CsharpIntroApp/bin/Debug/CsharpIntroApp.pdb
+/Users/chase/Projects/CsharpIntroApp/CsharpIntroApp/obj/Debug/CsharpIntroApp.csprojAssemblyReference.cache
+/Users/chase/Projects/CsharpIntroApp/CsharpIntroApp/obj/Debug/CsharpIntroApp.csproj.CoreCompileInputs.cache
+/Users/chase/Projects/CsharpIntroApp/CsharpIntroApp/obj/Debug/CsharpIntroApp.exe
+/Users/chase/Projects/CsharpIntroApp/CsharpIntroApp/obj/Debug/CsharpIntroApp.pdb
