@@ -46,10 +46,17 @@ namespace CsharpIntroApp
                     Console.ForegroundColor = ConsoleColor.Red;
 
                     Console.WriteLine("Wrong number, please try again!");
-                }
+
                     Console.ResetColor();
+                }
 
             }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            Console.WriteLine("You are correct!");
+
+            Console.ResetColor();
         }
     }
 }
